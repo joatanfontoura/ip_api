@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element db_object_id="d382a58f83c39210a29ce330ceaad31e" label="IP Data Location" max_length="40" name="x_1540861_ip_api_ip_data_location" type="collection">
+        <element label="IP Address" max_length="40" name="ip_address" type="string"/>
+        <element label="Time Zone" max_length="40" name="time_zone" type="string"/>
+        <element attributes="edge_encryption_enabled=true" default="javascript:global.getNextObjNumberPadded();" label="Number" max_length="40" name="number" type="string"/>
+        <element label="Country" max_length="40" name="country" type="string"/>
+        <element label="State" max_length="40" name="state" type="string"/>
+        <element label="City" max_length="40" name="city" type="string"/>
+    </element>
+</database>

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update>
+    <sys_documentation element="number" label="Number" language="en" table="x_1540861_ip_api_ip_data_location">
+        <sys_documentation action="INSERT_OR_UPDATE">
+            <element>number</element>
+            <help/>
+            <hint/>
+            <label>Number</label>
+            <language>en</language>
+            <name>x_1540861_ip_api_ip_data_location</name>
+            <plural>Numbers</plural>
+            <sys_class_name>sys_documentation</sys_class_name>
+            <sys_created_by>joatan</sys_created_by>
+            <sys_created_on>2025-01-16 18:39:35</sys_created_on>
+            <sys_mod_count>0</sys_mod_count>
+            <sys_name>Number</sys_name>
+            <sys_package display_value="IP API" source="x_1540861_ip_api">a0d1654f83c39210a29ce330ceaad31e</sys_package>
+            <sys_policy/>
+            <sys_scope display_value="IP API">a0d1654f83c39210a29ce330ceaad31e</sys_scope>
+            <sys_update_name>sys_documentation_x_1540861_ip_api_ip_data_location_number_en</sys_update_name>
+            <sys_updated_by>joatan</sys_updated_by>
+            <sys_updated_on>2025-01-16 18:39:35</sys_updated_on>
+            <url/>
+            <url_target/>
+        </sys_documentation>
+    </sys_documentation>
+</record_update>

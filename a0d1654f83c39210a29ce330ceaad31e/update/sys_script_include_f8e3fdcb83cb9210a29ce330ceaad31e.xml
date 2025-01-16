@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_script_include">
+    <sys_script_include action="INSERT_OR_UPDATE">
+        <access>public</access>
+        <active>true</active>
+        <api_name>x_1540861_ip_api.IPInfoFetcher</api_name>
+        <caller_access>1</caller_access>
+        <client_callable>true</client_callable>
+        <description/>
+        <mobile_callable>false</mobile_callable>
+        <name>IPInfoFetcher</name>
+        <sandbox_callable>false</sandbox_callable>
+        <script><![CDATA[var IPInfoFetcher = Class.create();
+IPInfoFetcher.prototype = Object.extendsObject(global.AbstractAjaxProcessor, {
+    getIPDetails: function () {
+        var ipAddress = this.getParameter('sysparm_ip');
+        if (!ipAddress) {
+            return JSON.stringify({ error: 'IP Address não fornecido.' });
+        }
+
+        try {
+            // Obtém a REST Message configurada
+            var restMessage = new sn_ws.RESTMessageV2('IP-API', 'Default GET');
+            restMessage.setStringParameterNoEscape('ip', ipAddress); // Define o IP como variável dinâmica
+
+            // Executa a mensagem e obtém a resposta
+            var response = restMessage.execute();
+            var responseBody = response.getBody();
+            var httpStatus = response.getStatusCode();
+
+            if (httpStatus === 200) {
+                return responseBody; // Retorna o corpo da resposta como JSON
+            } else {
+                gs.error('Erro ao buscar informações do IP. Código HTTP: ' + httpStatus);
+                return JSON.stringify({ error: 'Falha ao buscar dados do IP. Código HTTP: ' + httpStatus });
+            }
+        } catch (ex) {
+            gs.error('Erro ao executar REST Message: ' + ex.getMessage());
+            return JSON.stringify({ error: 'Erro interno ao buscar dados do IP.' });
+        }
+    },
+
+    type: 'IPInfoFetcher'
+});
+]]></script>
+        <sys_class_name>sys_script_include</sys_class_name>
+        <sys_created_by>joatan</sys_created_by>
+        <sys_created_on>2025-01-16 19:56:54</sys_created_on>
+        <sys_id>f8e3fdcb83cb9210a29ce330ceaad31e</sys_id>
+        <sys_mod_count>3</sys_mod_count>
+        <sys_name>IPInfoFetcher</sys_name>
+        <sys_package display_value="IP API" source="x_1540861_ip_api">a0d1654f83c39210a29ce330ceaad31e</sys_package>
+        <sys_policy>read</sys_policy>
+        <sys_scope display_value="IP API">a0d1654f83c39210a29ce330ceaad31e</sys_scope>
+        <sys_update_name>sys_script_include_f8e3fdcb83cb9210a29ce330ceaad31e</sys_update_name>
+        <sys_updated_by>joatan</sys_updated_by>
+        <sys_updated_on>2025-01-16 20:21:18</sys_updated_on>
+    </sys_script_include>
+    <sys_es_latest_script action="INSERT_OR_UPDATE">
+        <id>f8e3fdcb83cb9210a29ce330ceaad31e</id>
+        <sys_created_by>joatan</sys_created_by>
+        <sys_created_on>2025-01-16 19:56:53</sys_created_on>
+        <sys_id>d444b50f83cb9210a29ce330ceaad3c9</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_updated_by>joatan</sys_updated_by>
+        <sys_updated_on>2025-01-16 19:56:53</sys_updated_on>
+        <table>sys_script_include</table>
+        <use_es_latest>true</use_es_latest>
+    </sys_es_latest_script>
+</record_update>
