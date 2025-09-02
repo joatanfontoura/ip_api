@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?><record_update table="sys_alias">
+    <sys_alias action="INSERT_OR_UPDATE">
+        <configuration_template/>
+        <connection_type>http_connection</connection_type>
+        <id>x_1540861_ip_api.IP_API</id>
+        <is_internal>false</is_internal>
+        <multiple_connections>false</multiple_connections>
+        <name>IP API</name>
+        <parent/>
+        <retry_policy display_value="Default HTTP Retry Policy">ef751ff07301330025d71afe2ff6a7f9</retry_policy>
+        <sys_class_name>sys_alias</sys_class_name>
+        <sys_created_by>joatan</sys_created_by>
+        <sys_created_on>2025-09-02 19:12:38</sys_created_on>
+        <sys_id>2d2e7c7493b7aa10d6dab03efaba1098</sys_id>
+        <sys_mod_count>0</sys_mod_count>
+        <sys_name>x_1540861_ip_api.IP_API</sys_name>
+        <sys_package display_value="IP API" source="x_1540861_ip_api">a0d1654f83c39210a29ce330ceaad31e</sys_package>
+        <sys_policy/>
+        <sys_scope display_value="IP API">a0d1654f83c39210a29ce330ceaad31e</sys_scope>
+        <sys_update_name>sys_alias_2d2e7c7493b7aa10d6dab03efaba1098</sys_update_name>
+        <sys_updated_by>joatan</sys_updated_by>
+        <sys_updated_on>2025-09-02 19:12:38</sys_updated_on>
+        <type>connection</type>
+    </sys_alias>
+</record_update>
